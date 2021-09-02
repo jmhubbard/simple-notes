@@ -2,7 +2,7 @@ import { Fragment } from "react";
 
 import { useState } from "react";
 
-import ToDoItem from "../ToDoItem";
+import ToDoItem from "./ToDoItem";
 import NewToDo from "./NewToDo";
 
 const DUMMY_DATA = [
@@ -34,7 +34,7 @@ const ToDoList = () => {
   }
   return (
     <Fragment>
-      <ul>{allToDoItems}</ul>
+      <div>{allToDoItems}</div>
       <NewToDo onAddNewToDo={addNewToDoHandler}/>
     </Fragment>
   );
