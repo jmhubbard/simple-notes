@@ -1,6 +1,6 @@
-const ToDoItem = () => {
+const ToDoItem = (props) => {
     return (
-        <li>This is a todo</li>
+        <li key={props.id}>{props.task}</li>
     )
 };
 
