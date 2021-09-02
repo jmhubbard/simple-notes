@@ -1,5 +1,7 @@
 import { Fragment } from "react";
 
+import { useState } from "react";
+
 import ToDoItem from "../ToDoItem";
 import NewToDo from "./NewToDo";
 
@@ -10,7 +12,9 @@ const DUMMY_DATA = [
 ];
 
 const ToDoList = () => {
-  const allToDoItems = DUMMY_DATA.map((todo) => {
+    const [toDos, setToDos] = useState(DUMMY_DATA);
+
+  const allToDoItems = toDos.map((todo) => {
     return (
       <ToDoItem
         id={todo.id}
@@ -20,10 +24,18 @@ const ToDoList = () => {
       />
     );
   });
+
+  const addNewToDoHandler = (newToDo) => {
+    console.log(newToDo)
+    setToDos(prevToDos => {
+        return [...prevToDos, newToDo]
+    })
+
+  }
   return (
     <Fragment>
       <ul>{allToDoItems}</ul>
-      <NewToDo />
+      <NewToDo onAddNewToDo={addNewToDoHandler}/>
     </Fragment>
   );
 };
