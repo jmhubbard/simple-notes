@@ -2,7 +2,7 @@ import { useRef } from "react";
 
 import classes from "./NewToDo.module.css";
 
-import addToDoButton from "../../assets/images/add.png"
+import addToDoButton from "../../assets/images/add.png";
 
 const NewToDo = (props) => {
   const toDoInputRef = useRef();
@@ -22,9 +22,23 @@ const NewToDo = (props) => {
   return (
     <div className={classes.newToDo}>
       <form onSubmit={submitHandler}>
-        {/* <label htmlFor="new todo">New ToDo</label> */}
-        <input type="text" id="newToDoInput" ref={toDoInputRef} className={classes.newToDo__text}/>
-        <input type="image" alt="Add new toDo button" src={addToDoButton} className={classes.addToDoButton}/>
+        <div className={classes.newToDoText}>
+          <input
+            type="text"
+            id="newToDoInput"
+            placeholder="Enter a new toDo"
+            ref={toDoInputRef}
+            className={classes.newToDo__text}
+          />
+        </div>
+        <div className={classes.addNewToDoButton}>
+          <input
+            type="image"
+            alt="Add new toDo button"
+            src={addToDoButton}
+            className={classes.addToDoButton}
+          />
+        </div>
       </form>
     </div>
   );
