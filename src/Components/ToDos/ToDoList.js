@@ -2,6 +2,8 @@ import { Fragment } from "react";
 
 import { useState } from "react";
 
+import classes from "./ToDoList.module.css";
+
 import ToDoItem from "./ToDoItem";
 import NewToDo from "./NewToDo";
 
@@ -43,7 +45,9 @@ const ToDoList = () => {
 
   return (
     <Fragment>
-      <div>{allToDoItems}</div>
+      <div className={classes.itemList} id="test">
+        {allToDoItems} 
+      </div>
       <NewToDo onAddNewToDo={addNewToDoHandler} />
     </Fragment>
   );
