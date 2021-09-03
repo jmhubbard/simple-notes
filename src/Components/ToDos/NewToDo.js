@@ -1,5 +1,9 @@
 import { useRef } from "react";
 
+import classes from "./NewToDo.module.css";
+
+import addToDoButton from "../../assets/images/add.png"
+
 const NewToDo = (props) => {
   const toDoInputRef = useRef();
 
@@ -14,11 +18,15 @@ const NewToDo = (props) => {
     props.onAddNewToDo(newTask);
     toDoInputRef.current.value = "";
   };
+
   return (
-    <form onSubmit={submitHandler}>
-      <label htmlFor="new todo">New ToDo</label>
-      <input type="text" id="newToDo" ref={toDoInputRef}/>
-    </form>
+    <div className={classes.newToDo}>
+      <form onSubmit={submitHandler}>
+        {/* <label htmlFor="new todo">New ToDo</label> */}
+        <input type="text" id="newToDoInput" ref={toDoInputRef} className={classes.newToDo__text}/>
+        <input type="image" alt="Add new toDo button" src={addToDoButton} className={classes.addToDoButton}/>
+      </form>
+    </div>
   );
 };
 
