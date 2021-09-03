@@ -1,6 +1,6 @@
 .toDoItem {
     /* text-align: right; */
-    border-bottom: 2px solid grey;
+    border-bottom: 1px solid grey;
 }
 
 .toDoItem p {
