@@ -1,0 +1,29 @@
+.newToDo {
+    border: 2px solid rgb(126, 125, 125);
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    margin: 16px auto;
+    width: 90%;
+    background-color: white;
+}
+
+.newToDo input:focus {
+    outline: none;
+    /* background-color: red; */
+}
+
+.newToDo__text {
+    border: none;
+    /* height: 100%; */
+    font-family: inherit;
+    font-size: 1rem;
+    width: 85%;
+    margin: 16px auto;
+    /* margin: .5rem; */
+}
+
+
+.addToDoButton {
+    height: 1.5rem;
+    vertical-align: middle;
+}
