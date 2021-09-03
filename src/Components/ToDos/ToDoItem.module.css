@@ -14,7 +14,7 @@
 
 .toDoItem img {
     height: 1.5rem;
-    text-align: right;
+    /* text-align: right; */
     margin: 0 10px;
     vertical-align: middle;
 }
@@ -26,7 +26,8 @@
 }
 
 .toDoText {
-    width: 85%;
+    width: 80%;
+    margin-left: 0.5rem;
 
 }
 

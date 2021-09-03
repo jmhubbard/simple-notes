@@ -17,7 +17,7 @@
     /* height: 100%; */
     font-family: inherit;
     font-size: 1rem;
-    width: 85%;
+    width: 100%;
     margin: 16px auto;
     /* margin: .5rem; */
 }
@@ -26,4 +26,15 @@
 .addToDoButton {
     height: 1.5rem;
     vertical-align: middle;
+    margin: 0 10px;
+}
+
+.newToDoText,
+.addNewToDoButton {
+    display: inline-block;
+}
+
+.newToDoText{
+    width: 80%;
+    margin-left: 0.5rem;
 }
