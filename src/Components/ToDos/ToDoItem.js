@@ -9,11 +9,15 @@ const ToDoItem = (props) => {
 
   return (
     <div className={classes.toDoItem}>
-      <div className={classes.toDoText}>
+      <div className={classes.toDoItem__Text}>
         <p>{props.task}</p>
       </div>
-      <div className={classes.deleteToDoButton}>
-      <img src={deleteImage} alt="Delete Button" onClick={deleteItemHandler} />
+      <div className={classes.toDoItem__DeleteButton}>
+        <img
+          src={deleteImage}
+          alt="Delete Button"
+          onClick={deleteItemHandler}
+        />
       </div>
     </div>
   );

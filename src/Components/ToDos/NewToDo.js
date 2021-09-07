@@ -20,29 +20,29 @@ const NewToDo = (props) => {
   };
 
   return (
-    <div className={classes.newToDo}>
-      <div className={classes.newToDo__box}>
+    // <div className={classes.newToDo}>
+      <div className={classes.newToDoItem}>
         <form onSubmit={submitHandler}>
-          <div className={classes.newToDoText}>
+          <div className={classes.newToDoItem__Text}>
             <input
               type="text"
               id="newToDoInput"
-              placeholder="Enter a new toDo"
+              placeholder="Enter a new to-do"
               ref={toDoInputRef}
-              className={classes.newToDo__text}
+              // className={classes.newToDo__text}
             />
           </div>
-          <div className={classes.addNewToDoButton}>
+          <div className={classes.newToDoItem__AddButton}>
             <input
               type="image"
               alt="Add new toDo button"
               src={addToDoButton}
-              className={classes.addToDoButton}
+              // className={classes.addToDoButton}
             />
           </div>
         </form>
       </div>
-    </div>
+    // </div>
   );
 };
 
