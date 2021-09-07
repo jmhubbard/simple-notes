@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Simple To-do's App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This simple to-do app utilizing React. New to-dos are stored in React's state (for a faster user experience) and in local storage (for a persitant state after a page reload).
 
 ## Available Scripts
 
