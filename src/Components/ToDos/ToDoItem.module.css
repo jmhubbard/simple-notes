@@ -6,6 +6,7 @@
 
 .toDoItem p {
   text-align: left;
+  word-wrap: break-word;
 }
 
 .toDoItem img {
