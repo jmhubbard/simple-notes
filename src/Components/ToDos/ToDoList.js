@@ -37,7 +37,6 @@ const ToDoList = () => {
         id={todo.id}
         key={todo.id}
         task={todo.task}
-        completed={todo.completed}
         onDeleteItem={deleteToDoHandler}
       />
     );

@@ -16,7 +16,6 @@ const NewToDo = (props) => {
       const newTask = {
         id: Math.random().toString(),
         task: cleanedNewToDo,
-        completed: false,
       };
       props.onAddNewToDo(newTask);
     }
