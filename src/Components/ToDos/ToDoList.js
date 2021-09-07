@@ -16,8 +16,6 @@ const ToDoList = () => {
   }, []);
 
   const deleteToDoHandler = (toDoID) => {
-    console.log("Delete Item in todolist");
-    console.log(toDoID);
     setToDos((prevToDos) => {
       const new_state = prevToDos.filter((toDo) => toDo.id !== toDoID);
       localStorage.setItem("todos", JSON.stringify(new_state));
@@ -26,7 +24,6 @@ const ToDoList = () => {
   };
 
   const addNewToDoHandler = (newToDo) => {
-    console.log(newToDo);
     setToDos((prevToDos) => {
       const new_state = [...prevToDos, newToDo];
       localStorage.setItem("todos", JSON.stringify(new_state));
@@ -46,12 +43,17 @@ const ToDoList = () => {
     );
   });
 
+
   return (
     <Fragment>
-      <div className={classes.itemList} id="test">
-        {allToDoItems}
+      {allToDoItems.length > 0 && (
+        <div className={classes.toDoList}>
+          {allToDoItems}
+        </div>
+      )}
+      <div className={classes.newToDo}>
+        <NewToDo onAddNewToDo={addNewToDoHandler} />
       </div>
-      <NewToDo onAddNewToDo={addNewToDoHandler} />
     </Fragment>
   );
 };
