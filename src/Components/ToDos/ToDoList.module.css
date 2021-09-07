@@ -1,8 +1,39 @@
-.itemList {
+.toDoList {
   border: 2px solid rgb(126, 125, 125);
   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
   border-radius: 8px;
   margin: 0 auto;
   width: 90%;
   background-color: white;
+}
+
+.newToDo {
+  border: 2px solid rgb(126, 125, 125);
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  margin: 16px auto;
+  width: 90%;
+  background-color: white;
+}
+
+.newToDo input:focus {
+  outline: none;
+}
+
+@media (min-width: 64rem) {
+  .toDoList {
+    width: 70%;
+  }
+  .newToDo {
+    width: 70%;
+  }
+}
+
+@media (min-width: 75rem) {
+  .toDoList {
+    width: 50%;
+  }
+  .newToDo {
+    width: 50%;
+  }
 }
